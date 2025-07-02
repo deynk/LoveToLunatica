@@ -11,15 +11,18 @@ body::before {
 }
 body {
   display:flex;
-  min-height: 100vh;
+  height: 100vh;
+  max-width: 100dvw;
   margin: 0;
   padding: 0;
   background-size: cover;
 }
 #displayer{
+  height: 100dvh;
   border: black solid;
-  display: block;
-  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   margin-left:auto;
   margin-right:auto;
   width: 80%;
@@ -31,13 +34,17 @@ body {
   width: 100dvw;
   flex-direction: row; /* Apila los textos verticalmente */
   text-align: center;
+  align-items: center;
   margin-top: 2rem;
-  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   border-radius: 1rem;
   background-color: #1e1e1e;
 }
 
 .songInfo{
+  margin: 0;
+  padding: 0;
   display:flex;
   flex-direction: column;
   margin-left: 1rem;
@@ -79,18 +86,17 @@ body {
   }
 
   .songName{
+    margin-bottom: 0;
     font-size: larger;
   }
 
   #lyrics{
-    display:flex;
-    text-align: center;
     margin:auto;
     padding:auto;
   }
   #letra{
     white-space: nowrap;
-    font-size: 1.5rem;
+    font-size: auto;
     text-align: left;
     font-weight: 700;
     font-family: "Libre Baskerville", serif;

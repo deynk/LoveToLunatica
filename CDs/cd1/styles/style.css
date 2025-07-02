@@ -29,6 +29,7 @@ body {
   display:flex;
   flex-direction: row; /* Apila los textos verticalmente */
   text-align: center;
+  align-items: center;
   margin-top: 2rem;
   padding: 1rem;
   border-radius: 1rem;
@@ -81,5 +82,6 @@ body {
 
   .songName{
     font-size:140%;
+    margin-bottom: 0;
   }
 }
