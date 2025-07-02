@@ -62,7 +62,7 @@ body {
     z-index: -1;
   }
   body{
-    min-height: 100dvh;
+    max-height: 100dvh;
   }
   
 
