@@ -39,6 +39,10 @@ body {
   padding-right: 1rem;
   border-radius: 1rem;
   background-color: #1e1e1e;
+  box-shadow: 1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+             -1px -1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+             -1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+              1px -1px 3px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
 }
 
 .songInfo{
@@ -70,10 +74,11 @@ body {
     background-image: url('../img/fondo.jpg');
     background-size:contain;
     background-repeat: repeat-y;
-    opacity: 0.7;
+    opacity: 0.3;
     z-index: -1;
   }
   body{
+    background-color: black;
     max-height: 100dvh;
   }
   
@@ -104,14 +109,14 @@ body {
   }
   #letra{
     white-space: nowrap;
-    font-size: auto;
+    font-size: 100%;
     text-align: left;
     font-weight: 700;
     font-family: "Libre Baskerville", serif;
-    color: rgb(0, 0, 0);
-    text-shadow: 1px 1px 2px rgb(255, 255, 255), /* Offset-X | Offset-Y | Blur | Color */
-                -1px -1px 2px rgb(255, 255, 255), /* Offset-X | Offset-Y | Blur | Color */
-                 1px -1px 2px rgb(255, 255, 255), /* Offset-X | Offset-Y | Blur | Color */
-                -1px 1px 2px rgb(255, 255, 255); /* Offset-X | Offset-Y | Blur | Color */
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+                -1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+                 1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+                -1px 1px 2px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
   }
 }
