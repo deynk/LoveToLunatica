@@ -19,7 +19,6 @@ body {
 }
 #displayer{
   height: 100dvh;
-  border: black solid;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -43,17 +42,21 @@ body {
 }
 
 .songInfo{
-  margin: 0;
-  padding: 0;
   display:flex;
   flex-direction: column;
   margin-left: 1rem;
+  margin-top: 0;
+  padding-top: 0;
 
   color: white;
   text-align: left;
   font-family: "Libre Baskerville", serif;
   font-weight: 2rem;
   font-style: normal;
+}
+.songInfo div{
+  height: 64px;
+  align-content: center;
 }
 
 
@@ -79,6 +82,9 @@ body {
     display:inline-flexbox;
     width: 128px;
     height: 128px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
     border-radius: 10px;
     border-color: black;
     box-shadow: 6px 6px 16px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
@@ -86,8 +92,10 @@ body {
   }
 
   .songName{
+    font-size:140%;
     margin-bottom: 0;
-    font-size: larger;
+    margin-top: 0;
+    padding-top: 0;
   }
 
   #lyrics{

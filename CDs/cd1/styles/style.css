@@ -31,6 +31,7 @@ body {
   text-align: center;
   align-items: center;
   margin-top: 2rem;
+  /*padding: 1rem;*/
   padding: 1rem;
   border-radius: 1rem;
   background-color: #1e1e1e;
@@ -43,6 +44,8 @@ body {
   display:flex;
   flex-direction: column;
   margin-left: 1rem;
+  margin-top: 0;
+  padding-top: 0;
 
   color: white;
   text-align: left;
@@ -50,7 +53,10 @@ body {
   font-weight: 2rem;
   font-style: normal;
 }
-
+.songInfo div{
+  height: 64px;
+  align-content: center;
+}
 
 
 @media (max-width: 678px) {
@@ -74,6 +80,8 @@ body {
     display:inline-flexbox;
     width: 128px;
     height: 128px;
+
+
     border-radius: 10px;
     border-color: black;
     box-shadow: 6px 6px 16px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
@@ -83,5 +91,7 @@ body {
   .songName{
     font-size:140%;
     margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
   }
 }
