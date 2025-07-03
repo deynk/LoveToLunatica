@@ -16,11 +16,14 @@ body {
   padding: 0;
   background-size: cover;
   background-color: black;
+
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 #displayer{
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
+  flex-wrap: wrap;
   margin-left:auto;
   margin-right:auto;
   width: 80%;
@@ -63,6 +66,19 @@ body {
   align-content: center;
 }
 
+footer{
+  display: flex;
+  height: 1rem;
+  background-color: black;
+  width: 100%;
+  
+  margin-top: 2rem;
+
+  color: white;
+}
+footer p{
+  background-color: black;
+}
 
 
 @media (max-width: 678px) {
@@ -74,8 +90,9 @@ body {
   body{
     max-width: 100dvw;
 
+    height: 100svh;
+
     padding-top: 2rem;
-    margin-bottom: 2rem;
   }
   
 
@@ -156,11 +173,13 @@ body {
   }
 
   #siguienteCancion{
-    margin-top: 2rem;
+    margin-top: 4rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+
+    margin-bottom: 2rem;
 
     color: white;
     background-color: #1e1e1e;
