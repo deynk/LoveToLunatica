@@ -1,25 +1,3 @@
-body::before {
-    content: "";
-    position:fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-image: url('../img/fondo.jpg');
-    background-size:cover;
-    background-repeat: repeat-y;
-    opacity: 0.3;
-    z-index: -1;
-}
-body {
-  display:flex;
-  max-width: 100dvw;
-  margin: 0;
-  padding: 0;
-  background-size: cover;
-  background-color: black;
-
-  flex-direction: row;
-  flex-wrap: wrap;
-}
 #displayer{
   display: flex;
   flex-direction: row;
@@ -30,109 +8,80 @@ body {
   text-align: center;
   justify-content: center;
 }
-.song{
-  display:flex;
-  width: 100dvw;
-  flex-direction: row; /* Apila los textos verticalmente */
-  text-align: center;
+
+footer{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
+
+  height: 3rem;
+  width: 100%;
+
+  background-color: #0e0e0e;
+
+  vertical-align: middle;
   align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-radius: 1rem;
+}
+footer p{
+  
+  height: 100%;
+  width: 80%;
+  
+  margin: 0;
+  padding: 0;
+  
+  line-height: 3rem;
+  text-align: center;
+  font-size: larger;
+
+  color: white;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+                -1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+                 1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+                -1px 1px 2px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
+}
+footer span{
+  color: red;
+}
+footer button{
+  margin: 0;
+  padding: 0;
+
+  height: 100%;
+  width: 20%;
+
   background-color: #1e1e1e;
   box-shadow: 1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
              -1px -1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
              -1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
               1px -1px 3px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
 
-  margin-bottom: 2rem;
-}
-
-.songInfo{
-  display:flex;
-  flex-direction: column;
-  margin-left: 1rem;
-  margin-top: 0;
-  padding-top: 0;
+  border: none;
 
   color: white;
-  text-align: left;
-  font-family: "Libre Baskerville", serif;
-  font-weight: 2rem;
-  font-style: normal;
-}
-.songInfo div{
-  height: 64px;
-  align-content: center;
-}
-
-footer{
-  display: flex;
-  height: 1rem;
-  background-color: black;
-  width: 100%;
-  
-  margin-top: 2rem;
-
-  color: white;
-}
-footer p{
-  background-color: black;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+                -1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+                 1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+                -1px 1px 2px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
 }
 
 
 @media (max-width: 678px) {
-  body::before {
-    background-size:contain;
-    background-repeat: repeat-y;
-    
+  #displayer{
   }
-  body{
-    max-width: 100dvw;
-
-    height: 100svh;
-
-    padding-top: 2rem;
-  }
-  
-
-  .caratula{
-    display:inline-flexbox;
-    width: 128px;
-    height: 128px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-
-    border-radius: 10px;
-    border-color: black;
-    box-shadow: 6px 6px 16px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-                -6px -6px 16px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
-  }
-
-  .songName{
-    font-size:140%;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding-top: 0;
-
-    font-weight: bolder;
-  }
-
   #lyrics{
-    margin:auto;
-    padding:auto;
+    display: flex;
+    margin: 0;
+    padding: 0;
   }
   #letra{
-    white-space: nowrap;
-    font-size: 100%;
-    text-align: left;
-    font-weight: 700;
-    font-family: "Libre Baskerville", serif;
-    color: rgb(255, 255, 255);
-    text-shadow: 1px 1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-                -1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-                 1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-                -1px 1px 2px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .nextSong{
@@ -161,7 +110,6 @@ footer p{
   .nextSong .songInfo div{
     margin: 0;
     padding: 0;
-    height: 25px;
   }
   .nextSong .songInfo p{
     margin: 0;
@@ -178,8 +126,7 @@ footer p{
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 
     color: white;
     background-color: #1e1e1e;
@@ -190,14 +137,11 @@ footer p{
               1px -1px 3px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
   }
   #siguienteCancion #text{
-    border: red solid;
     width: 100%;
     margin:0;
     padding:0;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-top: 16px;
+    padding-bottom: 16px;
 
     font-size: larger;
     text-align: center;

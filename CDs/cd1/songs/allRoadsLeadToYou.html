@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🎵 All Road Lead To You</title>
+    <link rel="stylesheet" type="text/css" href="../styles/bodyBackground.css">
     <link rel="stylesheet" type="text/css" href="./songStyles.css">
+    <link rel="stylesheet" type="text/css" href="../../globalStyles/songTag.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +25,7 @@
                 </div>
             </div>
         </div>
+
         <div id="lyrics">
             <p id="letra">
                 Whole roads lead to Rome or nothing 
@@ -108,7 +111,7 @@ Right back to you
         </div>
         <div id="siguienteCancion">
             <p id="text">Siguiente canción</p>
-            <div class="nextSong">
+            <div class="nextSong" onclick="window.location.href='./aUnPasoDeLaLuna.html'">
                 <img class="caratula" src="../img/caratulas/aUnPasoDeLaLuna.jpg" loading="lazy">
                 <div class="songInfo">
                     <div>
@@ -121,5 +124,9 @@ Right back to you
             </div>
         </div>
     </div>
+    <footer>
+        <p>Te quiero mucho <span>Luna ♥</span></p>
+        <button onclick="window.location.href='../cd1.html'">Volver a la Lista</button>
+    </footer>
 </body>
 </html>
