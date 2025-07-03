@@ -190,6 +190,7 @@ footer p{
               1px -1px 3px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
   }
   #siguienteCancion #text{
+    border: red solid;
     width: 100%;
     margin:0;
     padding:0;
