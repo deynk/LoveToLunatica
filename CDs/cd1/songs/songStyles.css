@@ -6,7 +6,7 @@ body::before {
     background-image: url('../img/fondo.jpg');
     background-size:cover;
     background-repeat: repeat-y;
-    opacity: 0.7;
+    opacity: 0.3;
     z-index: -1;
 }
 body {
@@ -16,6 +16,7 @@ body {
   margin: 0;
   padding: 0;
   background-size: cover;
+  background-color: black;
 }
 #displayer{
   height: 100dvh;
@@ -43,6 +44,8 @@ body {
              -1px -1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
              -1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
               1px -1px 3px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
+
+  margin-bottom: 2rem;
 }
 
 .songInfo{
@@ -67,19 +70,13 @@ body {
 
 @media (max-width: 678px) {
   body::before {
-    content: "";
-    position:fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-image: url('../img/fondo.jpg');
     background-size:contain;
     background-repeat: repeat-y;
-    opacity: 0.3;
-    z-index: -1;
+    
   }
   body{
-    background-color: black;
-    max-height: 100dvh;
+    max-width: 100dvw;
+    height: 100dvh;
   }
   
 
@@ -101,6 +98,8 @@ body {
     margin-bottom: 0;
     margin-top: 0;
     padding-top: 0;
+
+    font-weight: bolder;
   }
 
   #lyrics{
@@ -114,6 +113,76 @@ body {
     font-weight: 700;
     font-family: "Libre Baskerville", serif;
     color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+                -1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+                 1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+                -1px 1px 2px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
+  }
+
+  .nextSong{
+  display:flex;
+  width: 100dvw;
+  flex-direction: row; /* Apila los textos verticalmente */
+  text-align: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #0e0e0e;
+  box-shadow: 1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+             -1px -1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+             -1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+              1px -1px 3px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
+  }
+  .nextSong .caratula{
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+  }
+  .nextSong .songInfo{
+    height: 50px;
+  }
+  .nextSong .songInfo div{
+    margin: 0;
+    padding: 0;
+    height: 25px;
+  }
+  .nextSong .songInfo p{
+    margin: 0;
+    padding: 0;
+  }
+  .nextSong .songName{
+    font-size: 1rem;
+    font-weight: bolder;
+  }
+
+  #siguienteCancion{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+    color: white;
+    background-color: #1e1e1e;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+             -1px -1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+             -1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+              1px -1px 3px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
+  }
+  #siguienteCancion #text{
+    width: 100%;
+    margin:0;
+    padding:0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    font-size: larger;
+    text-align: center;
+
     text-shadow: 1px 1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
                 -1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
                  1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
