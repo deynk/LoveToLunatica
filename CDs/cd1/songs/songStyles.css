@@ -72,10 +72,29 @@ footer button{
 @media (max-width: 678px) {
   #displayer{
   }
+  #frame{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+  }
+  iframe{
+    padding-left: auto;
+    padding-right: auto;
+    
+    margin-top: 2rem;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+             -1px -1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+             -1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+              1px -1px 3px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
+  }
   #lyrics{
     display: flex;
     margin: 0;
     padding: 0;
+    padding-top: 2rem;
   }
   #letra{
     margin: 0;
@@ -86,7 +105,7 @@ footer button{
 
   .nextSong{
   display:flex;
-  width: 100dvw;
+  width: 100%;
   flex-direction: row; /* Apila los textos verticalmente */
   text-align: center;
   align-items: center;
@@ -140,8 +159,8 @@ footer button{
     width: 100%;
     margin:0;
     padding:0;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 
     font-size: larger;
     text-align: center;

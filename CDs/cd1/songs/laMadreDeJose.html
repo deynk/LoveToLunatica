@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎵 All Road Lead To You</title>
+    <title>🎵 La Madre De Jose</title>
     <link rel="stylesheet" type="text/css" href="../styles/bodyBackground.css">
     <link rel="stylesheet" type="text/css" href="./songStyles.css">
     <link rel="stylesheet" type="text/css" href="../../globalStyles/songTag.css">
@@ -14,7 +14,7 @@
 </head>
 <body>
     <div id="displayer">
-        <div class="song">
+        <div class="nextSong" onclick="window.location.href='https://www.youtube.com/watch?v=GBw8-_INgrU'">
             <img class="caratula" src="../img/caratulas/laMadreDeJose.jpg" loading="lazy">
             <div class="songInfo">
                 <div>
@@ -24,6 +24,16 @@
                     <p class="autor">- El Canto del Loco</p>
                 </div>
             </div>
+        </div>
+        <div id="frame">
+            <iframe 
+            class="video-iframe"
+            src="https://www.youtube.com/embed/XZKYXy5b3-s?autoplay=0&mute=0&controls=1&rel=0&modestbranding=1" 
+            title="Reproductor de YouTube"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen
+            loading="lazy"> <!-- Mejora performance -->
+        </iframe>
         </div>
 
         <div id="lyrics">
@@ -183,7 +193,7 @@ Que entrara dentro, oh
         </div>
         <div id="siguienteCancion">
             <p id="text">Siguiente canción</p>
-            <div class="nextSong" onclick="window.location.href='laMadreDeJose.html'">
+            <div class="nextSong" onclick="window.location.href='ifIKilledSomeoneForYou.html'">
             <img class="caratula" src="../img/caratulas/ifIKilledSomeoneForYou.jpg" loading="lazy">
             <div class="songInfo">
                 <div>

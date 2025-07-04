@@ -13,6 +13,8 @@
               1px -1px 3px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
 
   margin-bottom: 2rem;
+
+  width: 100%;
 }
 
 .songInfo{

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎵 All Road Lead To You</title>
+    <title>🎵 A Un Paso De La Luna</title>
     <link rel="stylesheet" type="text/css" href="../styles/bodyBackground.css">
     <link rel="stylesheet" type="text/css" href="./songStyles.css">
     <link rel="stylesheet" type="text/css" href="../../globalStyles/songTag.css">
@@ -14,16 +14,27 @@
 </head>
 <body>
     <div id="displayer">
-        <div class="song">
-            <img class="caratula" src="../img/caratulas/aUnPasoDeLaLuna.jpg" loading="lazy">
-            <div class="songInfo">
-                <div>
-                    <p class="songName">A Un Paso De La Luna</p>
-                </div>
-                <div>
-                    <p class="autor">- Ana Mena, Rocco Hunt</p>
+        <div class="nextSong" onclick="window.location.href='https://www.youtube.com/watch?v=NQ3YKiMZDxw&pp=ygUUYSB1biBwYXNvIGRlIGxhIGx1bmE%3D'">
+                <img class="caratula" src="../img/caratulas/aUnPasoDeLaLuna.jpg" loading="lazy">
+                <div class="songInfo">
+                    <div>
+                        <p class="songName">A Un Paso De La Luna</p>
+                    </div>
+                    <div>
+                        <p class="autor">- Ana Mena, Rocco Hunt</p>
+                    </div>
                 </div>
             </div>
+
+        <div id="frame">
+            <iframe 
+            class="video-iframe"
+            src="https://www.youtube.com/embed/Wq9gIjsSvT8?autoplay=0&mute=0&controls=1&rel=0&modestbranding=1" 
+            title="Reproductor de YouTube"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen
+            loading="lazy"> <!-- Mejora performance -->
+        </iframe>
         </div>
 
         <div id="lyrics">
@@ -161,16 +172,16 @@ Porque yo estoy pensando en ti otra ve'
         <div id="siguienteCancion">
             <p id="text">Siguiente canción</p>
             <div class="nextSong" onclick="window.location.href='laMadreDeJose.html'">
-            <img class="caratula" src="../img/caratulas/laMadreDeJose.jpg" loading="lazy">
-            <div class="songInfo">
-                <div>
-                    <p class="songName">La Madre De Jose</p>
-                </div>
-                <div>
-                    <p class="autor">- El Canto del Loco</p>
+                <img class="caratula" src="../img/caratulas/laMadreDeJose.jpg" loading="lazy">
+                <div class="songInfo">
+                    <div>
+                        <p class="songName">La Madre De Jose</p>
+                    </div>
+                    <div>
+                        <p class="autor">- El Canto del Loco</p>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </div>
     <footer>
