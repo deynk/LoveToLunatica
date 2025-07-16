@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎵 Party Tonight</title>
+    <link rel="stylesheet" type="text/css" href="../styles/bodyBackground.css">
+    <link rel="stylesheet" type="text/css" href="./songStyles.css">
+    <link rel="stylesheet" type="text/css" href="../../globalStyles/songTag.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="displayer">
+        <div class="nextSong" onClick="window.location.href='https://www.youtube.com/watch?v=rIgZvZVp-s8'">
+            <img class="caratula" src="../img/caratulas/partyTonight.jpg" loading="lazy">
+            <div class="songInfo">
+                <div>
+                    <p class="songName">Party Tonight</p>
+                </div>
+                <div>
+                    <p class="autor">- Mordecai Y Los Rigbi</p>
+                </div>
+            </div>
+        </div>
+        <div id="frame">
+            <iframe 
+            class="video-iframe"
+            src="https://www.youtube.com/embed/rIgZvZVp-s8?autoplay=0&mute=0&controls=1&rel=0&modestbranding=1" 
+            title="Reproductor de YouTube"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen
+            loading="lazy"> <!-- Mejora performance -->
+        </iframe>
+        </div>
+
+        <div id="lyrics">
+            <p id="letra">
+Tu mirada en mi mirada
+<br>
+Tan solo soy un tipo con ganas de amar
+<br>
+Y meta es poder mirar
+<br>
+La sorpresa en tus ojos si yo te besaba
+<br>
+
+<br>
+Tu sonrisa es el fuego que quema mi sol
+<br>
+Y la recordaré con pasión
+<br>
+La vida es muy corta, no lo has de olvidar
+<br>
+Esta noche vamos a bailar
+<br>
+Esta noche vamos a bailar
+<br>
+
+<br>
+Llegamos muy alto
+<br>
+Estamos genial
+<br>
+Vamos a bailar un rock en la Luna
+<br>
+
+<br>
+El pasado pasa
+<br>
+El futuro se va
+<br>
+Esta noche vamos a bailar
+<br>
+Esta noche vamos a bailar
+<br>
+
+            </p>
+        </div>
+        <div id="siguienteCancion">
+            <p id="text">Siguiente canción</p>
+            <div class="nextSong" onClick="window.location.href='angelDeFiorucci.html'">
+            <img class="caratula" src="../img/caratulas/angelDeFiorucci.jpg" loading="lazy">
+            <div class="songInfo">
+                <div>
+                    <p class="songName">Angel de Fiorucci</p>
+                </div>
+                <div>
+                    <p class="autor">- Devis</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+    <footer>
+        <script src="../scripts/footerList.inc.js"></script>
+    </footer>
+</body>
+</html>
