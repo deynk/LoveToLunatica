@@ -6,7 +6,7 @@ body::before {
     background-image: url('../img/fondo.jpg');
     background-size:cover;
     background-repeat: repeat-y;
-    opacity: 0.4;
+    opacity: 0.35;
     z-index: -1;
 }
 body {
