@@ -12,7 +12,7 @@ let button = document.createElement("button");
 
 //button.click(window.location.href='../cd1.html');
 
-button.addEventListener("click", ()=>{window.location.href='../cd1.html'});
+button.addEventListener("click", ()=>{window.location.href='../'});
 button.textContent = "Volver a la Lista";
 
 footer[0].appendChild(p);

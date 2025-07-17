@@ -5,7 +5,6 @@ body{
 }
 
 #displayer{
-  border: solid red;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -23,6 +22,38 @@ body{
   white-space: normal;
   overflow-wrap:anywhere;
 }
+
+#lyrics{
+  display: flex;
+  width: 100%;
+  margin: auto;
+  padding: auto;
+  padding-top: 2rem;
+}
+#letra{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+#letra{
+  white-space: nowrap;
+  font-size: 100%;
+  text-align: left;
+  font-weight: 700;
+  font-family: "Libre Baskerville", serif;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+              -1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+                1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+              -1px 1px 2px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
+}
+
+
+
 
 .caratula{
   height: 128px;
@@ -183,30 +214,43 @@ iframe{
             -1px -1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
             -1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
             1px -1px 3px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
-}
-
-@media (min-width: 678px) {
-  #frame{
+          }
+          
+/* VISTA PARA PC*/
+@media (min-width: 896px){
+  #displayer{
+    width: 60%;
+    max-width: 60%;
   }
+  
   iframe{
     height: 15rem;
   }
+  
+  #letra{
+    font-size: 2rem;
+  }
 }
-@media (max-width: 678px) {
+
+
+
+/* VISTA PARA MOVILES HORIZONTAL*/
+@media (max-width: 896px) and (min-width: 678px) {
   #displayer{
+    width: 60%;
+    max-width: 60%;
   }
   
-  #lyrics{
-    display: flex;
-    margin: 0;
-    padding: 0;
-    padding-top: 2rem;
-  }
   #letra{
-    margin: 0;
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 20px;
+  }
+}
+
+
+
+/* VISTA PARA MOVILES VERTICAL*/
+@media (max-width: 678px) {
+  #displayer{
   }
 
   .nextSong{
@@ -275,5 +319,9 @@ iframe{
                 -1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
                  1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
                 -1px 1px 2px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
+  }
+
+  #letra{
+    font-size: 1rem;
   }
 }

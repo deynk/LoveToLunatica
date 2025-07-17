@@ -62,20 +62,6 @@
   padding:auto;
 }
 
-#letra{
-  white-space: nowrap;
-  font-size: 100%;
-  text-align: left;
-  font-weight: 700;
-  font-family: "Libre Baskerville", serif;
-  color: rgb(255, 255, 255);
-  text-shadow: 1px 1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-              -1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-                1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-              -1px 1px 2px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
-}
-
-
 
 @media (min-width: 678px){
   body{
@@ -123,22 +109,5 @@
     padding-top: 0;
 
     font-weight: bolder;
-  }
-
-  #lyrics{
-    margin:auto;
-    padding:auto;
-  }
-  #letra{
-    white-space: nowrap;
-    font-size: 100%;
-    text-align: left;
-    font-weight: 700;
-    font-family: "Libre Baskerville", serif;
-    color: rgb(255, 255, 255);
-    text-shadow: 1px 1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-                -1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-                 1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-                -1px 1px 2px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
   }
 }
