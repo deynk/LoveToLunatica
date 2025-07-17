@@ -3,8 +3,7 @@
   flex-direction: row; /* Apila los textos verticalmente */
   text-align: center;
   align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  
   border-radius: 1rem;
   background-color: #1e1e1e;
   box-shadow: 1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
@@ -15,6 +14,16 @@
   margin-bottom: 2rem;
 
   width: 100%;
+}
+
+.caratula{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  border-radius: 1rem;
+  border-color: black;
+  box-shadow: 6px 6px 16px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+             -6px -6px 16px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
 }
 
 .songInfo{
@@ -39,20 +48,72 @@
   align-content: center;
 }
 
+.songName{
+  font-size:140%;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 0;
+
+  font-weight: bolder;
+}
+
+#lyrics{
+  margin:auto;
+  padding:auto;
+}
+
+#letra{
+  white-space: nowrap;
+  font-size: 100%;
+  text-align: left;
+  font-weight: 700;
+  font-family: "Libre Baskerville", serif;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+              -1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+                1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+              -1px 1px 2px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
+}
+
+
+
+@media (min-width: 678px){
+  body{
+    padding-top: 2rem;
+  }
+
+  .song{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
 
 
 @media (max-width: 678px) {
+  .song{
+  display:flex;
+  flex-direction: row; /* Apila los textos verticalmente */
+  text-align: center;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 1rem;
+  background-color: #1e1e1e;
+  box-shadow: 1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+             -1px -1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+             -1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+              1px -1px 3px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
+
+  margin-bottom: 2rem;
+
+  width: 100%;
+}
+
   .caratula{
     display:inline-flexbox;
     width: 128px;
     height: 128px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-
-    border-radius: 10px;
-    border-color: black;
-    box-shadow: 6px 6px 16px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-                -6px -6px 16px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
+    
   }
 
   .songName{

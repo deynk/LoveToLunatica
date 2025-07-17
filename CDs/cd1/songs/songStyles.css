@@ -1,14 +1,112 @@
+body{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 #displayer{
+  border: solid red;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-left:auto;
   margin-right:auto;
   width: 80%;
+  max-width: 80%;
   text-align: center;
   justify-content: center;
 }
 
+#lyrics #letra{
+  text-align: left;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap:anywhere;
+}
+
+.caratula{
+  height: 128px;
+  width: 128px;
+}
+
+.nextSong{
+  display:flex;
+  width: 100%;
+  flex-direction: row; /* Apila los textos verticalmente */
+  text-align: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #0e0e0e;
+  box-shadow: 1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+             -1px -1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+             -1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+             1px -1px 3px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
+            }
+            
+#siguienteCancion #text{
+  color: darkgray;
+}
+
+.nextSong .caratula{
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+}
+.nextSong .songInfo{
+  height: 50px;
+}
+.nextSong .songInfo div{
+  margin: 0;
+  padding: 0;
+}
+.nextSong .songInfo p{
+  margin: 0;
+  padding: 0;
+}
+.nextSong .songName{
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+
+
+#siguienteCancion{
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 4rem;
+
+  background-color: #1e1e1e;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+            -1px -1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+            -1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+            1px -1px 3px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
+}
+#siguienteCancion #text{
+  color: darkgray;
+  width: 100%;
+  margin:0;
+  padding:0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  font-size: larger;
+  text-align: center;
+
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+              -1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+                1px -1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+              -1px 1px 2px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
+}
+
+
+  
 footer{
   display: flex;
   flex-direction: column;
@@ -68,28 +166,36 @@ footer button{
                 -1px 1px 2px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
 }
 
+#frame{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+}
+iframe{
+  padding-left: auto;
+  padding-right: auto;
+  
+  margin-top: 2rem;
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+            -1px -1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+            -1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+            1px -1px 3px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
+}
 
+@media (min-width: 678px) {
+  #frame{
+  }
+  iframe{
+    height: 15rem;
+  }
+}
 @media (max-width: 678px) {
   #displayer{
   }
-  #frame{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: flex;
-  }
-  iframe{
-    padding-left: auto;
-    padding-right: auto;
-    
-    margin-top: 2rem;
-    width: 100%;
-    border-radius: 1rem;
-    box-shadow: 1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-             -1px -1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-             -1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-              1px -1px 3px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
-  }
+  
   #lyrics{
     display: flex;
     margin: 0;
@@ -104,18 +210,18 @@ footer button{
   }
 
   .nextSong{
-  display:flex;
-  width: 100%;
-  flex-direction: row; /* Apila los textos verticalmente */
-  text-align: center;
-  align-items: center;
-  padding: 1rem;
-  border-radius: 1rem;
-  background-color: #0e0e0e;
-  box-shadow: 1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-             -1px -1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-             -1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-              1px -1px 3px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
+    display:flex;
+    width: 100%;
+    flex-direction: row; /* Apila los textos verticalmente */
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #0e0e0e;
+    box-shadow: 1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+              -1px -1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+              -1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
+                1px -1px 3px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
   }
   .nextSong .caratula{
     width: 50px;
