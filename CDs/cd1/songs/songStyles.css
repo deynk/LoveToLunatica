@@ -241,6 +241,10 @@ iframe{
     max-width: 60%;
   }
   
+  iframe{
+    height: 16rem;
+  }
+
   #letra{
     font-size: 20px;
   }
