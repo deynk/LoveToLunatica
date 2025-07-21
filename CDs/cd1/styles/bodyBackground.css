@@ -18,6 +18,13 @@ body {
   background-color: black;
 }
 
+@media (max-width: 896px) and (min-width: 678px) {
+  body::before{
+    background-size:contain;
+    background-repeat: repeat-y;
+  }
+}
+
 @media (max-width: 678px) {
   html{
     height: 100%;
