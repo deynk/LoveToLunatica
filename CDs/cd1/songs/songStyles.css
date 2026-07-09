@@ -10,8 +10,8 @@ body{
   flex-wrap: wrap;
   margin-left:auto;
   margin-right:auto;
-  width: 80%;
-  max-width: 80%;
+  width: min(90%, 760px);
+  max-width: 100%;
   text-align: center;
   justify-content: center;
 }
@@ -27,7 +27,6 @@ body{
   display: flex;
   width: 100%;
   margin: auto;
-  padding: auto;
   padding-top: 2rem;
 }
 #letra{
@@ -40,8 +39,8 @@ body{
 
 
 #letra{
-  white-space: nowrap;
-  font-size: 100%;
+  white-space: normal;
+  font-size: 1rem;
   text-align: left;
   font-weight: 700;
   font-family: "Libre Baskerville", serif;
@@ -63,11 +62,13 @@ body{
 .nextSong{
   display:flex;
   width: 100%;
-  flex-direction: row; /* Apila los textos verticalmente */
+  flex-direction: row;
   text-align: center;
   align-items: center;
+  gap: 1rem;
   padding: 1rem;
   border-radius: 1rem;
+  overflow: hidden;
   background-color: #0e0e0e;
   box-shadow: 1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
              -1px -1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
@@ -80,6 +81,7 @@ body{
 }
 
 .nextSong .caratula{
+  flex: 0 0 auto;
   width: 50px;
   height: 50px;
   margin: 0;
@@ -87,7 +89,8 @@ body{
   border-radius: 10px;
 }
 .nextSong .songInfo{
-  height: 50px;
+  min-height: 50px;
+  min-width: 0;
 }
 .nextSong .songInfo div{
   margin: 0;
@@ -100,6 +103,7 @@ body{
 .nextSong .songName{
   font-size: 1rem;
   font-weight: bolder;
+  overflow-wrap: anywhere;
 }
 
 
@@ -140,7 +144,7 @@ body{
   
 footer{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
 
   margin: 0;
@@ -157,7 +161,8 @@ footer{
 footer p{
   
   height: 100%;
-  width: 80%;
+  flex: 1 1 12rem;
+  min-width: 0;
   
   margin: 0;
   padding: 0;
@@ -180,7 +185,8 @@ footer button{
   padding: 0;
 
   height: 100%;
-  width: 20%;
+  flex: 0 1 12rem;
+  min-width: 8rem;
 
   background-color: #1e1e1e;
   box-shadow: 1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
@@ -209,6 +215,8 @@ iframe{
   
   margin-top: 2rem;
   width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
   border-radius: 1rem;
   box-shadow: 1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
             -1px -1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
@@ -219,12 +227,8 @@ iframe{
 /* VISTA PARA PC*/
 @media (min-width: 896px){
   #displayer{
-    width: 60%;
-    max-width: 60%;
-  }
-  
-  iframe{
-    height: 15rem;
+    width: min(60%, 900px);
+    max-width: 100%;
   }
   
   #letra{
@@ -237,12 +241,8 @@ iframe{
 /* VISTA PARA MOVILES HORIZONTAL*/
 @media (max-width: 896px) and (min-width: 678px) {
   #displayer{
-    width: 60%;
-    max-width: 60%;
-  }
-  
-  iframe{
-    height: 16rem;
+    width: min(80%, 680px);
+    max-width: 100%;
   }
 
   #letra{
@@ -258,18 +258,7 @@ iframe{
   }
 
   .nextSong{
-    display:flex;
-    width: 100%;
-    flex-direction: row; /* Apila los textos verticalmente */
-    text-align: center;
-    align-items: center;
-    padding: 1rem;
-    border-radius: 1rem;
-    background-color: #0e0e0e;
-    box-shadow: 1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-              -1px -1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-              -1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-                1px -1px 3px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
+    padding: 0.75rem;
   }
   .nextSong .caratula{
     width: 50px;
@@ -278,7 +267,7 @@ iframe{
     padding: 0;
   }
   .nextSong .songInfo{
-    height: 50px;
+    min-height: 50px;
   }
   .nextSong .songInfo div{
     margin: 0;
@@ -289,8 +278,7 @@ iframe{
     padding: 0;
   }
   .nextSong .songName{
-    font-size: 1rem;
-    font-weight: bolder;
+    font-size: clamp(0.9rem, 4.5vw, 1rem);
   }
 
   #siguienteCancion{
@@ -327,5 +315,16 @@ iframe{
 
   #letra{
     font-size: 1rem;
+  }
+
+  footer{
+    height: auto;
+  }
+
+  footer p,
+  footer button{
+    width: 100%;
+    flex-basis: 100%;
+    min-height: 3rem;
   }
 }

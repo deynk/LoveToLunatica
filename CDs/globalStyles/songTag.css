@@ -1,8 +1,10 @@
 .song{
   display:flex;
-  flex-direction: row; /* Apila los textos verticalmente */
+  flex-direction: row;
   text-align: center;
   align-items: center;
+  gap: 1rem;
+  overflow: hidden;
   
   border-radius: 1rem;
   background-color: #1e1e1e;
@@ -17,6 +19,7 @@
 }
 
 .caratula{
+  flex: 0 0 auto;
   margin-top: 1rem;
   margin-bottom: 1rem;
 
@@ -29,9 +32,9 @@
 .songInfo{
   display:flex;
   flex-direction: column;
-  margin-left: 1rem;
   margin-top: 0;
   padding-top: 0;
+  min-width: 0;
 
   color: white;
   text-shadow: 1px 1px 2px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
@@ -40,21 +43,26 @@
                 -1px 1px 2px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
   text-align: left;
   font-family: "Libre Baskerville", serif;
-  font-weight: 2rem;
+  font-weight: 700;
   font-style: normal;
 }
 .songInfo div{
-  height: 64px;
+  min-height: 64px;
   align-content: center;
 }
 
 .songName{
-  font-size:140%;
+  font-size: clamp(1rem, 4.5vw, 1.4rem);
   margin-bottom: 0;
   margin-top: 0;
   padding-top: 0;
 
   font-weight: bolder;
+  overflow-wrap: anywhere;
+}
+
+.autor{
+  overflow-wrap: anywhere;
 }
 
 #lyrics{
@@ -77,37 +85,17 @@
 
 @media (max-width: 678px) {
   .song{
-  display:flex;
-  flex-direction: row; /* Apila los textos verticalmente */
-  text-align: center;
-  align-items: center;
   padding-left: 1rem;
   padding-right: 1rem;
-  border-radius: 1rem;
-  background-color: #1e1e1e;
-  box-shadow: 1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-             -1px -1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-             -1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
-              1px -1px 3px rgb(0, 0, 0); /* Offset-X | Offset-Y | Blur | Color */
-
-  margin-bottom: 2rem;
-
-  width: 100%;
 }
 
   .caratula{
-    display:inline-flexbox;
-    width: 128px;
-    height: 128px;
-    
+    width: clamp(74px, 28vw, 128px);
+    height: clamp(74px, 28vw, 128px);
+    object-fit: cover;
   }
 
   .songName{
-    font-size:140%;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding-top: 0;
-
-    font-weight: bolder;
+    font-size: clamp(1rem, 5vw, 1.4rem);
   }
 }
