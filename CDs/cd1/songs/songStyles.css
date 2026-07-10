@@ -150,7 +150,7 @@ footer{
   margin: 0;
   padding: 0;
 
-  height: 3rem;
+  min-height: 3rem;
   width: 100%;
 
   background-color: #0e0e0e;
@@ -160,9 +160,9 @@ footer{
 }
 footer p{
   
-  height: 100%;
   flex: 1 1 12rem;
   min-width: 0;
+  min-height: 3rem;
   
   margin: 0;
   padding: 0;
@@ -184,9 +184,9 @@ footer button{
   margin: 0;
   padding: 0;
 
-  height: 100%;
   flex: 0 1 12rem;
   min-width: 8rem;
+  min-height: 3rem;
 
   background-color: #1e1e1e;
   box-shadow: 1px 1px 3px rgb(0, 0, 0), /* Offset-X | Offset-Y | Blur | Color */
@@ -319,6 +319,7 @@ iframe{
 
   footer{
     height: auto;
+    min-height: 0;
   }
 
   footer p,
